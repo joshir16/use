@@ -33,7 +33,10 @@ export function MovieDetails({
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
 
-  const isWatched = watched.map((movie) => movie.imdbId).includes(selectedId);
+  const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId);
+  const watchedUserRating = watched.find(
+    (movie) => movie.imdbID === selectedId
+  )?.userRating;
 
   const {
     Title: title,
@@ -50,7 +53,7 @@ export function MovieDetails({
 
   function handleAdd() {
     const newWatchedMovie = {
-      imdbId: selectedId,
+      imdbID: selectedId,
       title,
       year,
       poster,
@@ -121,7 +124,7 @@ export function MovieDetails({
                   )}
                 </>
               ) : (
-                <p>You have rated this movie</p>
+                <p>You have rated this movie {watchedUserRating} ⭐</p>
               )}
             </div>
             <p>
