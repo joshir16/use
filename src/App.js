@@ -6,7 +6,7 @@ import { MovieList } from "./MovieList";
 import { Navbar, Search, NumResult } from "./Navbar";
 import { Loader, ErrorMessage } from "./Loader";
 
-export const KEY = "ba7b32c2";
+export const KEY = process.env.REACT_APP_OMDB_API_KEY;
 
 export const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
