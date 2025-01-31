@@ -13,7 +13,3 @@ usePopcorn is a React application that allows users to explore movies, rate them
 ## Demo
 
 [Insert a link to a live demo or screenshots of your application here.]
-<<<<<<< HEAD
-=======
-
->>>>>>> d0aea2c44702bcff3f26816281b590d104f64eb1
