@@ -12,4 +12,4 @@ usePopcorn is a React application that allows users to explore movies, rate them
 
 ## Demo
 
-[Insert a link to a live demo or screenshots of your application here.]
+[https://usepoporn.netlify.app/]
