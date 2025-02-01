@@ -8,8 +8,8 @@ usePopcorn is a React application that allows users to explore movies, rate them
 - **View Movie Details**: Access detailed information about each movie, such as release date, runtime, genre, IMDb rating, and plot summary.
 - **Rate Movies**: Rate movies using a star rating system.
 - **Manage Watchlist**: Add movies to your watchlist and mark them as watched.
-- **Local Storage**: All data is stored in the browser's local storage, ensuring privacy and persistence without the need for user accounts.
+<!-- **Local Storage**: All data is stored in the browser's local storage, ensuring privacy and persistence without the need for user accounts. -->
 
 ## Demo
 
-[https://usepoporn.netlify.app/]
+[https://usepopcornnmovies.netlify.app/]
