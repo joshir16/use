@@ -47,6 +47,24 @@ export function MovieDetails({
 
   useEffect(
     function () {
+      function keypress(e) {
+        if (e.code === "Escape") {
+          onCloseMovie();
+          console.log("Escape");
+        }
+      }
+
+      document.addEventListener("keydown", keypress);
+
+      return function () {
+        document.removeEventListener("keydown", keypress);
+      };
+    },
+    [onCloseMovie]
+  );
+
+  useEffect(
+    function () {
       setIsLoading(true);
       async function getMovieDetails() {
         const res = await fetch(
