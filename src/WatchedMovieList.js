@@ -1,4 +1,4 @@
-export function WatchedMovieList({ watched, onDeleteWatched }) {
+export function WatchedMovieList({ watched, onDeleteWatched, onSelectMovie }) {
   return (
     <ul className="list">
       {watched.map((movie) => (
@@ -6,17 +6,18 @@ export function WatchedMovieList({ watched, onDeleteWatched }) {
           movie={movie}
           key={movie.imdbID}
           onDeleteWatched={onDeleteWatched}
+          onSelectMovie={onSelectMovie}
         />
       ))}
     </ul>
   );
 }
 
-function WatchedMovie({ movie, onDeleteWatched }) {
+function WatchedMovie({ movie, onDeleteWatched, onSelectMovie }) {
   return (
     <li>
       <img src={movie.poster} alt={`${movie.title} poster`} />
-      <h3>{movie.title}</h3>
+      <h3 onClick={() => onSelectMovie(movie.imdbID)}>{movie.title}</h3>
       <div>
         <p>
           <span>⭐️</span>
@@ -33,7 +34,10 @@ function WatchedMovie({ movie, onDeleteWatched }) {
 
         <button
           className="btn-delete"
-          onClick={() => onDeleteWatched(movie.imdbID)}
+          onClick={(e) => {
+            e.stopPropagation();
+            onDeleteWatched(movie.imdbID);
+          }}
         >
           X
         </button>

@@ -23,7 +23,7 @@ export function WatchedSummary({ watched }) {
         </p>
         <p>
           <span>⏳</span>
-          <span>{avgRuntime.toFixed(0)} min</span>
+          <span>Avg {avgRuntime.toFixed(0)} min</span>
         </p>
       </div>
     </div>

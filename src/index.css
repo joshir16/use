@@ -10,14 +10,25 @@
   --color-red-dark: #e03131;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
 }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: 50em) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    font-size: 37.5%;
+  }
 }
 
 body {
@@ -27,6 +38,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-background-900);
   padding: 2.4rem;
+  box-sizing: border-box;
 }
 
 /* ******* */
@@ -50,8 +62,8 @@ body {
 }
 
 .box {
-  width: 42rem;
-  max-width: 42rem;
+  width: 45rem;
+  max-width: 45rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
   overflow: scroll;
@@ -174,6 +186,12 @@ body {
 
 .list h3 {
   font-size: 1.8rem;
+  cursor: pointer;
+  display: contents;
+
+  &:hover {
+    color: var(--color-text-dark);
+  }
 }
 
 .list div {
