@@ -93,7 +93,7 @@ export default function App() {
     <>
       <Navbar>
         <Search query={query} setQuery={setQuery} />
-        <NumResult movies={movies} />
+        {movies.length > 0 ? <NumResult movies={movies} /> : <></>}
       </Navbar>
 
       <Main>

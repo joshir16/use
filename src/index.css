@@ -51,6 +51,13 @@ body {
   padding: 0 3.2rem;
   background-color: var(--color-primary);
   border-radius: 0.9rem;
+
+  @media only screen and (max-width: 37.5em) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    min-height: 15rem;
+  }
 }
 
 .main {
@@ -90,6 +97,10 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  @media only screen and (max-width: 37.5em) {
+    justify-self: center;
+    padding: 1rem;
+  }
 }
 
 .logo span {
@@ -114,6 +125,12 @@ body {
 
   /* background-color: var(--color-background-900); */
   background-color: var(--color-primary-light);
+
+  @media only screen and (max-width: 50em) {
+    min-width: 35rem;
+    width: auto;
+    justify-self: center;
+  }
 }
 
 .search::placeholder {
@@ -129,6 +146,11 @@ body {
 .num-results {
   justify-self: end;
   font-size: 1.8rem;
+
+  @media only screen and (max-width: 37.5em) {
+    justify-self: center;
+    padding: 1rem;
+  }
 }
 
 .btn-toggle {
