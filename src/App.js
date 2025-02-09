@@ -15,9 +15,12 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
 
-  const watchedMovies = JSON.parse(localStorage.getItem("watchedMovies")) || [];
+  const [watched, setWatched] = useState(function () {
+    const watchedMovies =
+      JSON.parse(localStorage.getItem("watchedMovies")) || [];
+    return watchedMovies;
+  });
 
-  const [watched, setWatched] = useState(watchedMovies);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [selectedId, setSelectedId] = useState(null);

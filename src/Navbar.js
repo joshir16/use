@@ -18,6 +18,7 @@ export function Search({ query, setQuery }) {
   return (
     <input
       className="search"
+      name="search"
       type="text"
       placeholder="Search movies..."
       value={query}
